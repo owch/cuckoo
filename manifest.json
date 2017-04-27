@@ -16,9 +16,11 @@
     {
       "matches": ["https://*/*"],
       "css": ["core.css"],
-      "js": ["core.js"],
       "run_at": "document_end",
       "all_frames": true
     }
-  ]
+  ],
+  "background":{
+      "scripts":["background.js"]
+  }
 }
