@@ -25,3 +25,7 @@ document.addEventListener('mousemove', function (e) {
     prevDOM = srcElement;
   }
 }, false);
+
+document.addEventListener('click', function (e) {
+  console.log(e.srcElement.innerHTML);
+})
