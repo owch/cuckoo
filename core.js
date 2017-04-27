@@ -30,7 +30,7 @@ document.addEventListener('mousemove', function (e) {
 }, false);
 
 document.addEventListener('click', logInner);
-document.removeEventListener('click', logInner);
+// document.removeEventListener('click', logInner);
 
 function logInner(e) {
     var x = e.clientX,
