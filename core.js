@@ -43,6 +43,8 @@ function logInner(e) {
   e.preventDefault();
 }
 
+var tagBlacklist = ['IMG'];
+
 function elementFromPoint(x, y) {
   // http://stackoverflow.com/questions/21051084/javascript-know-all-the-elements-under-your-mouse-pointer-multiple-z-axis-laye
   var /*x = e.clientX,
@@ -54,7 +56,7 @@ function elementFromPoint(x, y) {
 
     // console.log("tagName: " + elementMouseIsOver.tagName);
 
-    while (elementMouseIsOver.tagName == 'IMG'){
+    while (tagBlacklist.includes(elementMouseIsOver.tagName)){
 
         elementMouseIsOver.style.pointerEvents = 'none';
         elementMouseIsOver = document.elementFromPoint(x, y);
