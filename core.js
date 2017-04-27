@@ -26,6 +26,11 @@ document.addEventListener('mousemove', function (e) {
   }
 }, false);
 
-document.addEventListener('click', function (e) {
+document.addEventListener('click', logInner);
+document.removeEventListener('click', logInner);
+
+function logInner(e) {
   console.log(e.srcElement.innerHTML);
-})
+  e.stopPropagation();
+  e.preventDefault();
+}
