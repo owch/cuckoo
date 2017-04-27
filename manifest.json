@@ -14,9 +14,8 @@
   ],
   "content_scripts": [
     {
-      "matches": ["http://*/*"],
+      "matches": ["<all_urls>"],
       "css": ["core.css"],
-      
       "run_at": "document_end",
       "all_frames": true
     }
